@@ -1,4 +1,6 @@
 @import 'base';
+@import 'normalize';
+
 
 // Global variable scope
 
@@ -11,7 +13,7 @@
   &::before {
     content: ' ';
     position: absolute;
-    top: 0px;
+    top: 1px;
     width: 100%;
   }
 
@@ -55,26 +57,18 @@
   }
 };
 
-// --------------------------------main
+// --------------------------------main---
 .container {
-  // width: 50%; 
-  // position: relative;
-
   .box {
   position: relative;
   display: flex;
   width: 100%;
-  padding-bottom: 100%;
-  // height: 760px;
+  // padding-bottom: 100%;
+  height: calc(100vh - 132px - 60px );
   background: #FFD83B;
   box-shadow: 2px 2px 15px 0 rgba(0,0,0,0.50); 
   }
   img:nth-child(1) {
-  //  width: 30%;
-  //  overflow: auto;
-  //  margin: auto;
-  //  position: absolute;
-  //  top: 0; left: 0; bottom: 0; right: 0;
     position: absolute;
     max-width: 40%;
     top: 50%;
