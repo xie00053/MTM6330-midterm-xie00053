@@ -327,6 +327,37 @@ template {
 [hidden] {
   display: none; }
 
+.back-to-top-wrapper {
+  text-align: right;
+  margin: 1rem 2rem; }
+  .back-to-top-wrapper a {
+    color: black;
+    padding: 3px;
+    background: #D8D8D8;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+    .back-to-top-wrapper a:link {
+      color: darkorange;
+      text-decoration: none; }
+    .back-to-top-wrapper a:hover {
+      color: aliceblue;
+      background-color: darkorange; }
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: grey; }
+  .footer .socia-media {
+    display: flex;
+    padding-left: 20px; }
+    .footer .socia-media a {
+      margin-left: 8px; }
+  .footer .copyright {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 20px; }
+
 .header {
   display: flex;
   flex-direction: column;

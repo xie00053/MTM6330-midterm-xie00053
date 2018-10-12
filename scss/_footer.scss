@@ -1,0 +1,39 @@
+
+.back-to-top-wrapper {
+    text-align: right;
+    margin: 1rem 2rem;
+    a{
+      color: black;
+      padding: 3px;
+      background: #D8D8D8;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+      &:link {
+        color: darkorange;
+        text-decoration: none;
+      }
+      &:hover {
+        color: aliceblue;
+        background-color: darkorange;
+      }
+    }
+  };
+  
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: grey;
+    .socia-media {
+      display: flex;
+      padding-left: 20px;
+      a {
+        margin-left: 8px;
+      }
+    }
+    .copyright { 
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      margin-right: 20px;
+    } 
+  };
