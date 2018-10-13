@@ -1,5 +1,6 @@
 
 .back-to-top-wrapper {
+    display: none;
     text-align: right;
     margin: 1rem 2rem;
     a{
@@ -19,6 +20,7 @@
   };
   
   .footer {
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
