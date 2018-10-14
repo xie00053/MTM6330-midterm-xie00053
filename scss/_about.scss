@@ -1,10 +1,12 @@
 $box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.5);
 $text-shadow: 0 0 3px rgba(0,0,0,0.50);
+$border: 1px solid darkgrey;
+$background: #D8D8D8;
 
 .section-about {        
     display: flex;
     flex-direction: column;
-    background:#D8D8D8;
+    background:$background;
 
     .section-1, .section-2 {
         width: 100%;
@@ -26,7 +28,7 @@ $text-shadow: 0 0 3px rgba(0,0,0,0.50);
         p {
             width: 85%;
             text-align: center;
-            border-bottom: 1px solid darkgrey;
+            border-bottom: $border;
             padding-bottom: 30px;
         }
     }
@@ -60,7 +62,7 @@ $text-shadow: 0 0 3px rgba(0,0,0,0.50);
         .section-1 {
             display: flex;
             flex-direction: column;
-            border-right: 1px solid darkgrey;
+            border-right: $border;
             width: 35%;
             max-height: 700px;
             overflow-y: scroll;

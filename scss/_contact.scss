@@ -1,0 +1,148 @@
+
+$box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+$text-shadow: 0 0 3px rgba(0,0,0,0.50);
+$border: 1px solid darkgrey;
+$background: #D8D8D8;
+
+.section-contact {
+    .contact-form, .map-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: $border;
+        padding-bottom: 35px;
+
+        h2 {
+            text-shadow: $text-shadow;
+            padding-top: 30px;
+        }
+        p {
+            text-align: center;
+        }
+    }
+
+    .contact-form {
+        border-bottom: $border;
+
+        form {
+            width: 90%;
+            box-shadow: 1px 1px 10px 1px #ccc;
+            border-radius: 20px;
+            padding: 1.5rem 1rem 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            fieldset {
+                /* margin: 0.5rem; */
+                border: none;
+                display: flex;
+                width: 100%;
+                input, textarea {
+                    height: 2.5rem;
+                    border: $border;
+                    border-radius: 0.5rem;
+                    width: 100%; 
+                }
+                textarea {
+                    height: 4.5rem;
+                }
+            }
+
+            input[type="text"]:focus {
+                background-color: $background;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                padding: 0.5rem;
+                color: white;
+                background-color: rgba(255, 165, 0, 0.8);
+                border: none;
+                border-radius: 0.3rem;
+            }
+
+            input[type="submit"]:hover {
+                background-color: orange;
+                color: aliceblue;
+                box-shadow: $box-shadow;
+                -webkit-transition-duration: 0.4s;
+                /* Safari */
+                transition-duration: 0.4s;
+            }
+        }
+    }
+
+    iframe {
+        height:22rem; 
+        border:0;
+        width: 90%;
+        box-shadow: $box-shadow;
+    }
+
+    @media screen and (min-width: 400px){
+        form {
+            width: 80%;
+
+            input[type="submit"] {
+                height: 3rem;
+                width: 50%;
+            }            
+        }
+
+        iframe {
+            width: 80%;
+        }
+    }
+
+    @media screen and (min-width: 800px){
+        display: flex;
+        flex-direction: row;
+        align-items: space-between;
+        justify-content: center;
+        height: calc(100vh - 165px);
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 50px;
+        padding-right: 120px;
+        background: $background;
+        
+        .contact-form, .map-wrapper {
+            width: 50%;
+            border-bottom: none;
+        }
+        .contact-form {            
+            padding-right: 2rem;
+            h2 {
+                margin-bottom: 0;
+            }
+            p {
+                height: 3rem;
+            }
+            form {
+                width: 55%;
+                background: whitesmoke;
+            }
+        }
+
+        .map-wrapper {
+            padding-left: 2rem;
+            border-left: $border; 
+            h2 {
+                background: whitesmoke;
+                padding: 2.5rem;
+                width: 95%;
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            iframe {
+                width: 95%;
+                height: 23rem;
+            }
+        }
+    }
+}
+
+
+
+
