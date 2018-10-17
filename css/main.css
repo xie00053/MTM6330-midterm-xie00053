@@ -328,9 +328,9 @@ template {
   display: none; }
 
 .back-to-top-wrapper {
-  display: none;
+  display: block;
   text-align: right;
-  margin: 1rem 2rem; }
+  margin: 0.5rem 2rem 0 0; }
   .back-to-top-wrapper a {
     color: black;
     padding: 3px;
@@ -342,6 +342,9 @@ template {
     .back-to-top-wrapper a:hover {
       color: aliceblue;
       background-color: darkorange; }
+  @media screen and (min-width: 420px) {
+    .back-to-top-wrapper {
+      display: none; } }
 
 .footer {
   height: 60px;
