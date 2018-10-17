@@ -17,13 +17,64 @@ $height: calc(100vh - 165px);
 //code style
 .container {
   // 重叠两个页面
-    position: fixed;
     z-index: 10;
     width: 100%;
     height: $height;
-    .fade {
-      animation: fadeOut 1s 2s both;
+    position: relative;//两个button的位置relative这个container的高度
+    
+    .button {
+      display: flex;
+        li {
+          display: flex;
+          align-items: center;
+          background: rgba(255, 255, 255, 0.7);
+          z-index: 0;
+          a {
+            padding: 5px;
+            color: rgb(113, 113, 113);
+            font-weight: 600;
+            text-decoration: none;
+            &:hover {
+              text-shadow: $text-shadow;
+              color: whitesmoke;
+            }
+          }
+        }    
+        .right,
+        .left {
+          height: 140px;
+          width: 70px;
+          position: absolute;
+          top: 300px;
+          z-index: 3;
+            @media screen and (max-width: 420px) {
+              top: 200px;
+            }
+            @media screen and (min-width: 960px) {
+              height: 200px;
+              width: 100px;
+              top: 250px;
+              font-size: 1.5rem;
+            }
+          }
+    
+        .right {
+          border-bottom-right-radius: 100px;
+          border-top-right-radius: 100px;    
+        }
+    
+        .left {
+          border-bottom-left-radius: 100px;
+          border-top-left-radius: 100px;
+          right: 0;
+          padding-left: 8px;
+        }
+        //---------------------------------------------------button animation
+        .fadeIn {
+          animation: fadeIn 1s 2.8s both;
+        }
     }
+
   .box {
     position: relative;
     display: flex;
@@ -32,16 +83,32 @@ $height: calc(100vh - 165px);
     height: calc(100vh - 95px );
     background: #FFD83B;
     box-shadow: $box-shadow;
-
+      //---------------------------------------------------lense animation
       .rotate1 {
-        animation: rotateIn 1s both;
-        
+        animation: rotateIn-reverse 1s both;        
       }
       .rotate2 {
         animation: rotateIn 1s 1s both;
       }
-      
 
+      @keyframes rotateIn-reverse {
+        from {
+          -webkit-transform-origin: center;
+          transform-origin: center;
+          -webkit-transform: rotate3d(0, 0, 1, -200deg);
+          transform: rotate3d(0, 0, 1, -200deg);
+          opacity: 0;
+        }
+      
+        to {
+          -webkit-transform-origin: center;
+          transform-origin: center;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+      }
+      
       img:nth-child(1) {
         position: absolute;
         max-width: 40%;
@@ -58,54 +125,22 @@ $height: calc(100vh - 165px);
           max-width: 55%;
         }
       }
-  }  
+  }
+  //---------------------------------------------------Landing page animation
+  .fade {
+    animation: fadeOut 1s 2s both;
+  }
 };
-
 .main-content {
     width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between; //分开两个botton,水平居中；
-    align-items: center; //垂直居中；
-    height: 760px;
+    position: fixed;
+    top: 105px;
+    height: $height;
     background-image: url(../images/front-page.jpg);
     background-size: cover;
-
-  li {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.7);
-  }
-
-    .right,
-    .left {
-      height: 100px;
-      width: 50px;
-        }
-
-    .right {
-      border-bottom-right-radius: 100px;
-      border-top-right-radius: 100px;
-
-    }
-
-    .left {
-      border-bottom-left-radius: 100px;
-      border-top-left-radius: 100px;
-      // right: 0;
-      padding-left: 8px;
-    }
- 
-
  img {
     width: 100%;
-    height: calc(100vh - 115px - 6px );
+    height: $height;
     position: absolute;
   }
 }
-
-
-
-
-
-

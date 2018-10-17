@@ -23,7 +23,8 @@ $height: calc(100vh - 165px);
         }
     }
     .gallery > img {
-        width: 100%;
+        width: 90%;
+        margin-bottom: 20px;
         box-shadow: $box-shadow;
     }
     @media screen and (min-width: 420px) {
@@ -47,8 +48,8 @@ $height: calc(100vh - 165px);
             height: 700px;
             overflow-y: scroll;
             padding: 5% 3%;
-            grid-column-gap: 10px;
-            grid-row-gap: 10px;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
         }
     }
 

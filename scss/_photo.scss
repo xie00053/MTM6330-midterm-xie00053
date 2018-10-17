@@ -16,13 +16,18 @@ $height: calc(100vh - 165px);
             position: absolute;
             color: white;
             left: 0;
-            top: 40%;
+            top: 25%;
             width: 100%;
             text-align: center;
             z-index: 1;
+            color: grey;
             text-shadow: $text-shadow;
+            padding: 50px 0;
+            &:hover {
+                color: whitesmoke;
+            }
             @media screen and (min-width: 400px) {
-                top: 40%;
+                top: 25%;
             }
         }
         img { 
@@ -38,8 +43,9 @@ $height: calc(100vh - 165px);
             &:hover {
                 border-color: white;
             }
-            @media screen and (min-width: 400px) {
+            @media screen and (min-width: 420px) {
                 border: 10px solid darkgrey;
+                width: 50%;
             }
             @media screen and (min-width: 800px) {
                 width: 80%;
