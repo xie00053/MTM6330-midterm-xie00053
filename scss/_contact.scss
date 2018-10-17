@@ -4,6 +4,8 @@ $text-shadow: 0 0 3px rgba(0,0,0,0.50);
 $border: 1px solid darkgrey;
 $background: #D8D8D8;
 
+
+
 .section-contact {
     .contact-form, .map-wrapper {
         display: flex;
@@ -23,7 +25,6 @@ $background: #D8D8D8;
 
     .contact-form {
         border-bottom: $border;
-
         form {
             width: 90%;
             box-shadow: 1px 1px 10px 1px #ccc;
@@ -34,7 +35,6 @@ $background: #D8D8D8;
             align-items: center;
             
             fieldset {
-                /* margin: 0.5rem; */
                 border: none;
                 display: flex;
                 width: 100%;
@@ -73,6 +73,7 @@ $background: #D8D8D8;
         }
     }
 
+    
     iframe {
         height:22rem; 
         border:0;

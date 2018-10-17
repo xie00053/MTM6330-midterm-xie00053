@@ -3,6 +3,8 @@ $text-shadow: 0 0 3px rgba(0,0,0,0.50);
 $background: #D8D8D8;
 $height: calc(100vh - 165px);
 
+
+//container of images gallery
 .section-gallery {
     text-align: center;
     background: lightgrey;
@@ -22,6 +24,8 @@ $height: calc(100vh - 165px);
             justify-content: center;
         }
     }
+
+    // images effect
     .gallery > img {
         width: 90%;
         margin-bottom: 20px;
